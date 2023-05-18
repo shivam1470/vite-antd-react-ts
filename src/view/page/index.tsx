@@ -129,25 +129,27 @@ const FileManager = () => {
           <HeaderSection />
         </Header>
         <Content style={contentStyle}>
-          <SearchInput value={searchValue} onChange={handleSearchChange} />
-          <Row>
-            <Col span={5}>
-              <CategoryComponent catagory={catagory} />
-            </Col>
-            <Col span={17}>
-              <Card>
-                <FileTable
-                  files={fileList}
-                  onDelete={handleDelete}
-                  onEdit={handleEdit}
-                  searchValue={searchValue}
-                  isEditing={isEditing}
-                  onSave={handleSave}
-                  form={form}
-                />
-              </Card>
-            </Col>
-          </Row>
+          <div style={{ minWidth: "1300px" }}>
+            <SearchInput value={searchValue} onChange={handleSearchChange} />
+            <Row>
+              <Col span={5}>
+                <CategoryComponent catagory={catagory} />
+              </Col>
+              <Col span={17}>
+                <Card>
+                  <FileTable
+                    files={fileList}
+                    onDelete={handleDelete}
+                    onEdit={handleEdit}
+                    searchValue={searchValue}
+                    isEditing={isEditing}
+                    onSave={handleSave}
+                    form={form}
+                  />
+                </Card>
+              </Col>
+            </Row>
+          </div>
         </Content>
       </Layout>
     </Layout>
