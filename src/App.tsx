@@ -7,7 +7,11 @@ import FileManager from "./view/page";
  * @returns JSX.Element
  */
 function App() {
-  return <FileManager />;
+  return (
+    <div style={{ minWidth: "1300px" }}>
+      <FileManager />
+    </div>
+  );
 }
 
 export default App;
